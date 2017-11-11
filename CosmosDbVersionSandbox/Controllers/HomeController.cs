@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace CosmosDbVersionSandbox.Controllers
 {
@@ -17,6 +12,10 @@ namespace CosmosDbVersionSandbox.Controllers
         [Route("")]
         public string GetStatus()
         {
+            //Just creat an object refrence so that [we] know the DocumentDB library is 
+            //referenced by the solution code.
+            var fo = new Microsoft.Azure.Documents.Client.FeedOptions();
+
             return "OKay";
         }
 
