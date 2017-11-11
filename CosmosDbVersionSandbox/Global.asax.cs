@@ -12,9 +12,6 @@ namespace CosmosDbVersionSandbox
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-
-            //Remove XML Formatter
-            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }
